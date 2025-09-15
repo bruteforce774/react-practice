@@ -1,11 +1,16 @@
 import CounterButton from "./components/CounterButton";
 import Profile from "./components/Profile";
 
+const showButton = false;
+
 function App() {
   return (
     <>
-      <CounterButton />
-      <Profile />
+      { showButton ? (
+        <CounterButton />
+      ) : (
+        <Profile />
+      )}
     </>
   );
 }
