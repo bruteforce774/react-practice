@@ -1,18 +1,22 @@
 function ProductList() {
-
   const products = [
-    { title: "Cabbage", id: 1 },
-    { title: "Garlic", id: 2 },
-    { title: "Apple", id: 3 },
+    { title: "Cabbage", id: 1, isFruit: false },
+    { title: "Garlic", id: 2, isFruit: false },
+    { title: "Apple", id: 3, isFruit: true },
   ];
 
   const listItems = products.map((product) => (
-    <li key={product.id}>{product.title}</li>
+    <li
+      key={product.id}
+      style={{
+        color: product.isFruit ? "magenta" : "darkgreen",
+      }}
+    >
+      {product.title}
+    </li>
   ));
 
-  return (
-    <ul>{listItems}</ul>
-  );
+  return <ul>{listItems}</ul>;
 }
 
 export default ProductList;
