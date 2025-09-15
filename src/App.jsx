@@ -1,19 +1,18 @@
+import { useState } from "react";
+import "./App.css";
 import CounterButton from "./components/CounterButton";
-import Profile from "./components/Profile";
-import ProductList from "./components/ProductList";
-
-const showButton = false;
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
     <>
-      { showButton ? (
-        <CounterButton />
-      ) : (
-        <Profile />
-      )}
-
-      <ProductList />
+      <CounterButton count={count} onClick={handleClick} />
+      <CounterButton count={count} onClick={handleClick} />
     </>
   );
 }
