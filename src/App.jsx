@@ -1,5 +1,6 @@
 import CounterButton from "./components/CounterButton";
 import Profile from "./components/Profile";
+import ProductList from "./components/ProductList";
 
 const showButton = false;
 
@@ -11,6 +12,8 @@ function App() {
       ) : (
         <Profile />
       )}
+
+      <ProductList />
     </>
   );
 }
